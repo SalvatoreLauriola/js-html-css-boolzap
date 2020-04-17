@@ -1,5 +1,55 @@
+/* General Styles */
+
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+
+/* Font */
+
+body {
+  font-family: "Lato", sans-serif;
+}
+
+/* Contenitore generale */
+
+.wrap{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-image: linear-gradient(
+    to bottom,
+    #009688 0px,
+    #009688 15vh,
+    #d2dbdc 15vh,
+    #d2dbdc 100%
+  );
+}
+
+/* Contenitore sidebar e content */
+
+.container {
+  display: flex;
+  width: 80%;
+  min-width: 900px;
+  height: 95%;
+  background: #fff;
+}
+
+/* Sidebar sinistra */
+
+.sidebar {
+  width: 35%;
+  height: 100%;
+  background: #ccc;
+}
+
+/* Contenuto principale destra */
+
+.content {
+  width: 65%;
+  height: 100%;
+  background: #aaa;
 }
