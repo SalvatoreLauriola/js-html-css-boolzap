@@ -219,8 +219,6 @@ body {
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  
-
 }
 
 .icon-dx i {
@@ -239,15 +237,19 @@ body {
     font-size: 12px;
     font-weight: 200;
     text-decoration: none;
-    padding-top: 5px;
+    margin-top: 5px;
 }
 
-
+.settings:hover{
+  background-color:  #f0ebebf1;
+  cursor: pointer;
+}
 
 .content-main {
   width: 100%;
   flex-grow: 1;
   background-image: url("../img/mine.jpg");
+  padding: 20px 70px;
 }
 
 
@@ -266,10 +268,10 @@ body {
   align-items: center;
   
 }
-
-.profile-text {
-  padding-left: 25px;
+.first img {
+  margin-right:20px;
 }
+
 
 .message {
   flex-grow: 1;
@@ -297,4 +299,58 @@ color: #6c7376;
 
 .smile i {
   color: #6c7376;
+}
+
+.message-text{
+  list-style: none;
+}
+
+.chat {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.send {
+  display: flex;
+  justify-content: flex-end;
+}
+.receive {
+  display: flex;
+  justify-content: flex-start;
+}
+.style-send {
+  position: relative;
+  min-width: 100px;
+  min-height: 50px;
+  background-color: white;
+  border-radius: 10px;
+  padding: 15px 60px 5px 10px;
+  padding-bottom: 10px;
+  background-color: #d5faba;
+}
+.style-receive {
+  position: relative;
+  min-width: 100px;
+  min-height: 50px;
+  background-color: white;
+  border-radius: 10px;
+  padding: 15px 60px 5px 10px;
+  padding-bottom: 10px;
+  background-color: white;
+}
+
+.style-receive h6 {
+  position: absolute;
+  right: 5px;
+  bottom: 5px;
+  color: #b7b9bb;
+  
+}
+
+.style-send h6 {
+  position: absolute;
+  right: 5px;
+  bottom: 5px;
+  color: #b7b9bb;
 }
