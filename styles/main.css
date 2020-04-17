@@ -43,7 +43,7 @@ body {
 .sidebar {
   width: 35%;
   height: 100%;
-  background: #ccc;
+  overflow-y: scroll;
 }
 
 /* Contenuto principale destra */
@@ -52,6 +52,8 @@ body {
   width: 65%;
   height: 100%;
   background: #aaa;
+  display: flex;
+  flex-direction: column;
 }
 
 /* avatar sidebar */
@@ -104,4 +106,195 @@ body {
   color: grey;
   font-size: 12px;
   font-weight: 200;
+}
+
+.search {
+  height: 50px;
+  width: 100%;
+  padding: 8px;
+  display: flex;
+  background-color: #fafafa;
+  align-items: center;
+ 
+}
+
+.lens {
+  background-color: white;
+  height: 35px;
+  width: 15%;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  
+  
+}
+
+.input-part {
+  background-color: white;
+  height: 35px;
+  width: 85%;
+  
+}
+
+.input-part input {
+  height: 35px;
+  width: 100%;
+  padding: 5px;
+  border: none;
+}
+
+.input-part input::placeholder{
+  font-size: 10px;
+}
+.lens i {
+  color: lightgrey;
+}
+
+
+.profile {
+  
+  
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  }
+
+
+
+.profile  img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+
+
+.text-profile h5 {
+  font-weight: 600;
+  padding-bottom: 5px;
+}
+
+.text-profile h6 {
+  font-weight: 400;
+  color: grey;
+}
+
+
+.settings {
+  display: flex;
+  text-decoration: none;
+  align-items: center;
+  padding: 12px;
+  background-color: white;
+}
+
+.name {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  
+}
+
+/* Flex grow fa si che l'immagine prenda tutto contenuto */
+
+.text-profile{
+  flex-grow: 1;
+}
+
+.active {
+  background-color: #f0ebebf1;
+}
+
+.content-header {
+  height: 70px;
+  padding: 10px;
+  width: 100%;
+  background-color: #eaeaea;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.content-header img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  
+
+}
+
+.icon-dx i {
+  color: #b1b1b1;
+  font-size: 20px;
+  margin-right: 20px;
+}
+
+.profile-text h5 {
+  font-weight: 600;
+}
+
+.profile-text h6 {
+    text-decoration: underline;
+    color: grey;
+    font-size: 12px;
+    font-weight: 200;
+    text-decoration: none;
+    padding-top: 5px;
+}
+
+
+
+.content-main {
+  width: 100%;
+  flex-grow: 1;
+  background-image: url("../img/mine.jpg");
+}
+
+
+.content-footer {
+  width: 100%;
+  background-color: #f3eeeb;
+  display: flex;
+  align-items: center;
+  padding: 8px 0;
+  justify-content: space-between;
+
+}
+
+.first{
+  display: flex;
+  align-items: center;
+  
+}
+
+.profile-text {
+  padding-left: 25px;
+}
+
+.message {
+  flex-grow: 1;
+}
+
+.message input {
+  width: 100%;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 15px;
+  
+}
+
+.smile {
+  padding:5px 25px;
+}
+
+.vocal {
+  padding: 5px 25px;
+}
+
+.vocal i {
+color: #6c7376;
+}
+
+.smile i {
+  color: #6c7376;
 }
