@@ -43,7 +43,9 @@ body {
 .sidebar {
   width: 35%;
   height: 100%;
-  overflow-y: scroll;
+  display: flex;
+  flex-direction: column;
+  
 }
 
 /* Contenuto principale destra */
@@ -68,19 +70,23 @@ body {
   align-items: center;
 }
 
+
+
 .sidebar-header img {
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  
-
 }
+
+
 
 .icon-sx i {
   color: #b1b1b1;
   font-size: 20px;
   margin-right: 20px;
 }
+
+
 
 .notification {
   height: 70px;
@@ -90,6 +96,8 @@ body {
   align-items: center;
   padding: 12px;
 }
+
+
 
 .notification i {
   padding: 10px;
@@ -146,22 +154,20 @@ body {
 .input-part input::placeholder{
   font-size: 10px;
 }
+
 .lens i {
   color: lightgrey;
 }
 
-
 .profile {
-  
-  
+  flex-grow: 1;
   list-style: none;
   margin: 0;
   padding: 0;
+  overflow: auto;
   }
 
-
-
-.profile  img {
+  .profile  img {
   width: 50px;
   height: 50px;
   border-radius: 50%;
@@ -250,6 +256,7 @@ body {
   flex-grow: 1;
   background-image: url("../img/mine.jpg");
   padding: 20px 70px;
+  overflow: auto;
 }
 
 
@@ -295,6 +302,7 @@ body {
 
 .vocal i {
 color: #6c7376;
+cursor: pointer;
 }
 
 .smile i {
@@ -314,30 +322,36 @@ color: #6c7376;
 .send {
   display: flex;
   justify-content: flex-end;
+  margin-bottom: 20px;
 }
 .receive {
   display: flex;
   justify-content: flex-start;
+  margin-bottom: 20px;
 }
 .style-send {
   position: relative;
   min-width: 100px;
   min-height: 50px;
+  max-width: 400px;
   background-color: white;
   border-radius: 10px;
   padding: 15px 60px 5px 10px;
   padding-bottom: 10px;
   background-color: #d5faba;
+  word-wrap: break-word;
 }
 .style-receive {
   position: relative;
   min-width: 100px;
+  max-width: 400px;
   min-height: 50px;
   background-color: white;
   border-radius: 10px;
   padding: 15px 60px 5px 10px;
   padding-bottom: 10px;
   background-color: white;
+  word-wrap: break-word;
 }
 
 .style-receive h6 {
@@ -353,4 +367,9 @@ color: #6c7376;
   right: 5px;
   bottom: 5px;
   color: #b7b9bb;
+}
+
+
+.template {
+  display: none;
 }
