@@ -32,16 +32,24 @@ $(document).ready(function() {  // Inizio del doc ready
     }
   })
   
-  var search = $("name h5");
+ 
 
   // if (search.includes(''))
 
   var checkInput = $(".input-part input");
 
+  control(checkInput);
+  console.log(checkInput);
   // creazione della funzione che capta i tasti premuti
-  
-  function control(){
-  checkInput.keyup(function(event){
+
+  var contatti = $("name h5");
+
+if(contatti.each().includes())
+
+
+
+  function control(word){
+  $('input').keyup(function(event){
     console.log(event.which);
   })};
   
