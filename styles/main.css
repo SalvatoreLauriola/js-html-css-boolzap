@@ -328,21 +328,34 @@ cursor: pointer;
 }
 
 /* messaggi inviati */
-.send {
+/* .send {
   display: flex;
   justify-content: flex-end;
   margin-bottom: 20px;
 }
 
 /* messaggi ricevuti */
-.receive {
+/* .receive {
   display: flex;
   justify-content: flex-start;
   margin-bottom: 20px;
+} */ 
+
+.message-bubble {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.message-bubble.received {
+  justify-content: flex-start;
+}
+
+.message-bubble.send {
+  justify-content: flex-end;
 }
 
 /* bubble style inviati */
-.style-send {
+/* .style-send {
   position: relative;
   min-width: 100px;
   min-height: 50px;
@@ -353,10 +366,10 @@ cursor: pointer;
   padding-bottom: 10px;
   background-color: #d5faba;
   word-wrap: break-word;
-}
+} */
 
 /* bubble style ricevuti */
-.style-receive {
+.message-bubble .style {
   position: relative;
   min-width: 100px;
   max-width: 400px;
@@ -364,13 +377,16 @@ cursor: pointer;
   background-color: white;
   border-radius: 10px;
   padding: 15px 60px 5px 10px;
-  padding-bottom: 10px;
-  background-color: white;
   word-wrap: break-word;
 }
 
+/* colore inviati */
+.message-bubble.send .style {
+ background-color: #d5faba;
+}
+
 /* time stamp messaggi ricevuti */
-.style-receive h6 {
+.style h6 {
   position: absolute;
   right: 5px;
   bottom: 5px;
@@ -379,7 +395,7 @@ cursor: pointer;
 }
 
 /* time stamp messaggi inviati */
-.style-send h6 {
+.style h6 {
   position: absolute;
   right: 5px;
   bottom: 5px;
