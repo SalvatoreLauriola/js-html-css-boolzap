@@ -27,15 +27,15 @@ $(document).ready(function() {
       condition();
     }
   })
-  
+  function condition(){
+    var newMessage = $(".template li").clone();
+    var textMessage = message.val().trim()
+    if (textMessage !== ''){
+    newMessage.children().children('h5').text(textMessage);
+    $(".chat").append(newMessage);
+    message.val('');
+    }
+  }
 });  // Fine doc ready
 
-function condition(){
-  var newMessage = $(".template li").clone();
-  var textMessage = message.val().trim()
-  if (textMessage !== ''){
-  newMessage.children().children('h5').text(textMessage);
-  $(".chat").append(newMessage);
-  message.val('');
-  }
-}
+
