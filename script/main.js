@@ -32,7 +32,21 @@ $(document).ready(function() {  // Inizio del doc ready
     }
   })
   
-  // creazione della funzione
+  var search = $("name h5");
+
+  // if (search.includes(''))
+
+  var checkInput = $(".input-part input");
+
+  // creazione della funzione che capta i tasti premuti
+  
+  function control(){
+  checkInput.keyup(function(event){
+    console.log(event.which);
+  })};
+  
+  
+  // creazione della funzione che prende valore e inserisce nel dom
   function condition(){
     
     // variabile che seleziona il li del template fantasma clonandolo
@@ -67,6 +81,7 @@ $(document).ready(function() {  // Inizio del doc ready
     newReceived.children().children('h5').text(fakeMessage);
     $(".chat").append(newReceived);
   }
+
 });  // Fine doc ready
 
 
