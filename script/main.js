@@ -1,38 +1,50 @@
-
-// Aggiunta di un messaggio: l’utente scrive un testo nella parte bassa e cliccando icona ‘invia il testo’ viene aggiunto al thread sopra, come messaggio verde (ricordate focus() )
-// Messaggi visibili inizialmente sono inseriti statici nell’HTML
-// Usate un template nell’html e clone() per l’ inserimento del messaggio da fare in JS
-
-
-
-
-$(document).ready(function() {
+$(document).ready(function() {  // Inizio del doc ready
 
 
   // Refs
+  
+  // variabile dell'input del testo
   var message = $(".message input");
-
+  
+  //variabile dell'icona per il cambio classe quando in input
   var icon = $(".vocal i");
-
+  
+  // applicazione della funzione di invio testo al click
   $('body').on("click", '.vocal i', function(){
     condition();
     });
   
-  message.focus(function() {
-    icon.removeClass("fas fa-microphone").addClass("fas fa-paper-plane")
+    // funzione che rimuove icona microfono e mostra icona invio quando in input in message e viceversa
+  message.on('focus blur', function() {
+    icon.toggleClass("fa-microphone fa-paper-plane");
   });
-
+  
+  // funzione che capta quando viene cliccato tasto invio e solo in quel momento inserisce il messaggio preso da input
   $('body').on("keyup", '.message input', function(event){
     if(event.which == 13 || event.keyCode == 13) {
       condition();
     }
   })
+  
+  // creazione della funzione
   function condition(){
+    
+    // variabile che seleziona il li del template fantasma clonandolo
     var newMessage = $(".template li").clone();
+    
+    // variabile che prende il valore del messaggio e lo pulisce da spazi vuoti
     var textMessage = message.val().trim()
+    
+    // validazione in caso di messaggio vuoto
     if (textMessage !== ''){
+    
+      // selezioniamo h5 vuoto per poterlo riempire
     newMessage.children().children('h5').text(textMessage);
+    
+    //iniettiamo il messaggio nel dom
     $(".chat").append(newMessage);
+    
+    // puliamo il campo di testo una volta inviato il messaggio
     message.val('');
     }
   }

@@ -11,11 +11,13 @@
 </head>
 <body>
 
-
-<div class="wrap">
+<!-- Contenitore generico centrante con sfondo -->
+<div class="wrap">  
+  <!-- Contenitore centrale  -->
   <div class="container">
+    <!-- Sidebar sinistra dei contatti -->
     <div class="sidebar">
-
+      <!-- Header della sidebar con profilo -->
       <div class="sidebar-header">
         <img src="img/avatar_io.jpg" alt="avatar">
         <div class="icon-sx">
@@ -23,17 +25,16 @@
           <i class="fas fa-comment-alt"></i>
           <i class="fas fa-ellipsis-v"></i>
         </div>
-
       </div>
-
+      <!-- Spazio blu notifica -->
       <div class="notification">
-
         <i class="fas fa-bell-slash"></i>
         <div class="text-side">
           <h5>Ricevi notifiche di nuovi messaggi</h5>
           <h6>Attiva notifiche desktop</h6>
         </div>
       </div>
+      <!-- Sezione ricerca contatti -->
       <div class="search">
         <div class="lens">
           <i class="fas fa-search"></i>
@@ -42,12 +43,12 @@
           <input type="text" placeholder="Cerca o inizia una nuova chat">
         </div>
       </div>
-      
+      <!-- Primo contatto selezionato con classe active da spostare in futuro tra i contatti -->
       <ul class="profile">
+        <!-- Inizio della lista contatti con stile di ogni contatto -->
         <li class=" settings active">
           <img src="img/avatar_1.jpg" alt="avatar1">
-          
-          
+          <!-- Flex grow per permettere di espandere la sezione del nome contatto -->
           <div class="text-profile">
             <div class="name">
               <h5>Michele</h5>
@@ -146,81 +147,76 @@
             </div>
               <h6>Non poteva essere altrimenti</h6>
           </div>
-          
+         <!--Chiusura della lista contatti  -->
         </li>
       </ul>
-      
-      
-      
-
-
-      
+     <!--Chiusura della sidebar  -->
     </div>
+    <!-- Inizio parte centrale contenente chat -->
     <div class="content">
+      <!-- Header con  nome contatto selezionato -->
       <div class="content-header">
+        <!-- Stile contatto header -->
         <div class="first">
           <img src="img/avatar_1.jpg" alt="avatar">
           <div class="profile-text">
             <h5>Michele</h5>
             <h6>Ultimo accesso oggi alle 15:40</h6>
           </div>
-          
         </div>
-       
-        
-        
+        <!-- Icone funzionalità header -->
         <div class="icon-dx">
           <i class="fas fa-search"></i>
           <i class="fas fa-paperclip"></i>
           <i class="fas fa-ellipsis-v"></i>
-          
         </div>
       </div>
+      <!-- Contenuto vero e proprio chat, parte centrale -->
       <div class="content-main">
+        <!-- Inizio sezione chat -->
         <ul class="chat">
+          <!-- Messaggi inviati -->
           <li class="send">
+            <!-- Stile inviati -->
             <div class="style-send">
               <h5>Ciao come stai?</h5>
               <h6>06:20</h6>
             </div>
           </li>
+          <!-- Messaggi ricevuti -->
           <li class="receive">
+            <!-- Stile ricevuti -->
             <div class="style-receive">
               <h5>Ciao come stai?</h5>
               <h6>14:21</h6>
-
             </div>
+            <!-- Chiusura ricevuti -->
           </li>
-
+        <!-- Chiusura lista messaggi -->
         </ul>
-        
-
+        <!-- Chiusura contenuto chat  -->
       </div>
+      <!-- Inizio sezione input messagggio -->
       <div class="content-footer">
         <div class="smile">
           <i class="far fa-smile"></i>
         </div>
+        <!-- Input del messaggio -->
         <div class="message">
           <input type="text" placeholder="Scrivi un messaggio">
         </div>
+        <!-- Icona relativa all'invio funzionante in js -->
         <div class="vocal">
           <i class="fas fa-microphone"></i>
         </div>
-        
-
       </div>
+      <!--Chiusura del content generico centrale  -->
     </div>
-  
-
-
-
-
-
-
+  <!--Chiusura container centrale  -->
   </div>
 
-
-
+  <!-- Inizio template da clonare in jS per invio messaggi -->
+  
   <div class="template">
     <li class="send">
       <div class="style-send">
@@ -230,18 +226,7 @@
     </li>
   </div>
 
-
-
-
-
-
-
-
-
-
-  <!-- jQuery -->
-
-
+<!-- jQuery -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js"></script> <!-- jQuery Cdn-->
 <script src="script/main.js"></script> 
 </body>
