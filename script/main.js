@@ -87,12 +87,13 @@ searchInput.keyup(function() {
     
       // selezioniamo h5 vuoto per poterlo riempire
     newMessage.children().children('h5').text(textMessage);
-
+      
     // Creazione e inserimento ora attuale
     var data = new Date();
     var ora = addZero( data.getHours() );
     var minuti = addZero( data.getMinutes() );
-    var orario = ora + ':' + minuti;
+    var orario =ora + ':' + minuti;
+    
     newMessage.children().children('h6').text(orario);  
     
     //iniettiamo il messaggio nel dom
@@ -114,7 +115,7 @@ searchInput.keyup(function() {
   // Aggiungi zero iniziale a numeri inferiori a 10
   function addZero(number) {
     if(number < 10) {
-      number = '0' + numero;
+      number = '0' + number;
     }
 
     return number;
@@ -125,9 +126,14 @@ searchInput.keyup(function() {
     
     newReceived.addClass("received");
     
-    var fakeMessage= 'Ciao'
+    var fakeMessage = 'Ciao'
+    var data = new Date();
+    var ora = addZero( data.getHours() );
+    var minuti = addZero( data.getMinutes() );
+    var orario =ora + ':' + minuti;
 
     newReceived.children().children('h5').text(fakeMessage);
+    newReceived.children().children('h6').text(orario);
     $(".chat").append(newReceived);
     scrollMessage();
   }
@@ -145,7 +151,7 @@ searchInput.keyup(function() {
       
     }
 
-
+$('')
 
 
 
