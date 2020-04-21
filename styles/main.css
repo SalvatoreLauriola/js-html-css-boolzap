@@ -327,20 +327,6 @@ cursor: pointer;
   list-style: none;
 }
 
-/* messaggi inviati */
-/* .send {
-  display: flex;
-  justify-content: flex-end;
-  margin-bottom: 20px;
-}
-
-/* messaggi ricevuti */
-/* .receive {
-  display: flex;
-  justify-content: flex-start;
-  margin-bottom: 20px;
-} */ 
-
 .message-bubble {
   display: flex;
   margin-bottom: 20px;
@@ -353,20 +339,6 @@ cursor: pointer;
 .message-bubble.send {
   justify-content: flex-end;
 }
-
-/* bubble style inviati */
-/* .style-send {
-  position: relative;
-  min-width: 100px;
-  min-height: 50px;
-  max-width: 400px;
-  background-color: white;
-  border-radius: 10px;
-  padding: 15px 60px 5px 10px;
-  padding-bottom: 10px;
-  background-color: #d5faba;
-  word-wrap: break-word;
-} */
 
 /* bubble style ricevuti */
 .message-bubble .style {
