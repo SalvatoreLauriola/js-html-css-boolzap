@@ -8,6 +8,8 @@ $(document).ready(function() {  // Inizio del doc ready
   
   //variabile dell'icona per il cambio classe quando in input
   var icon = $(".vocal i");
+
+  var searchInput = $('.input-part input');
   
 
 
@@ -34,20 +36,35 @@ $(document).ready(function() {  // Inizio del doc ready
   
  
 
-  // if (search.includes(''))
-
-  var checkInput = $(".input-part input");
-
-  control(checkInput);
-  console.log(checkInput);
-  // creazione della funzione che capta i tasti premuti
-
-  var contatti = $("name h5");
-
-if(contatti.each().includes())
+  
 
 
+// Sidebar search
 
+searchInput.keyup(function() {
+    var search = $(this).val().toLowerCase().trim()
+
+    
+    $('.settings').each(function(){
+      // nome contatto attuale ottenuto grazie al this
+        var nameContact = $(this).find('.name h5').text().toLowerCase()
+        // verifica input con nomi contatti
+        if( nameContact.includes(search) ){
+          $(this).show()
+        }else {
+          $(this).hide()
+        }
+    
+      })
+
+});
+
+
+
+  
+  
+  
+  
   function control(word){
   $('input').keyup(function(event){
     console.log(event.which);
@@ -70,15 +87,39 @@ if(contatti.each().includes())
     
       // selezioniamo h5 vuoto per poterlo riempire
     newMessage.children().children('h5').text(textMessage);
+
+    // Creazione e inserimento ora attuale
+    var data = new Date();
+    var ora = addZero( data.getHours() );
+    var minuti = addZero( data.getMinutes() );
+    var orario = ora + ':' + minuti;
+    newMessage.children().children('h6').text(orario);  
     
     //iniettiamo il messaggio nel dom
     $(".chat").append(newMessage);
+
+    //scroll
+   
     
     // puliamo il campo di testo una volta inviato il messaggio
     message.val('');
-    }
-  }
 
+    // scroll
+    scrollMessage();
+    }
+    
+  }
+  
+
+  // Aggiungi zero iniziale a numeri inferiori a 10
+  function addZero(number) {
+    if(number < 10) {
+      number = '0' + numero;
+    }
+
+    return number;
+
+  }
   function received (){
     var newReceived = $(".template .message-bubble").clone();
     
@@ -88,8 +129,28 @@ if(contatti.each().includes())
 
     newReceived.children().children('h5').text(fakeMessage);
     $(".chat").append(newReceived);
+    scrollMessage();
   }
+
+  
+    // scroll ultimo mess
+    function scrollMessage() {
+      var pixelScroll = $('.chat').height();
+
+      // $('.content-main').scrollTop(pixelScroll);
+      $('.content-main').animate({
+        scrollTop: pixelScroll 
+      }, 500);
+
+      
+    }
+
+
+
+
+
 
 });  // Fine doc ready
 
 
+                     
